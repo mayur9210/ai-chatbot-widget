@@ -1,23 +1,16 @@
 {
 	"name": "ai-chatbot-widget",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"build:css": "npx tailwindcss -i ./src/input.css -o ./public/styles.css --minify",
-		"watch:css": "npx tailwindcss -i ./src/input.css -o ./public/styles.css --watch",
 		"deploy": "npm run build:css && wrangler deploy",
-		"dev": "npm run build:css && wrangler dev",
-		"start": "wrangler dev",
-		"test": "vitest",
-		"cf-typegen": "wrangler types"
+		"dev": "npm run build:css && wrangler dev"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.8.19",
 		"autoprefixer": "^10.4.23",
 		"postcss": "^8.5.6",
 		"tailwindcss": "^3.4.19",
-		"typescript": "^5.5.2",
-		"vitest": "~3.2.0",
 		"wrangler": "^4.56.0"
 	}
 }
